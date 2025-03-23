@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://khkbvf22flbm"]
+[gd_scene load_steps=9 format=3 uid="uid://khkbvf22flbm"]
 
 [ext_resource type="PackedScene" uid="uid://ceas6uebeekbs" path="res://scenes/player.tscn" id="1_wlsoq"]
 [ext_resource type="PackedScene" uid="uid://b3yg5jhjt01ub" path="res://scenes/button.tscn" id="2_5bbap"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://dpdiojfvhu61c" path="res://icon.svg" id="4_5mt6x"]
 [ext_resource type="PackedScene" uid="uid://cp41fugu1ykmr" path="res://scenes/cube.tscn" id="5_86i2c"]
 [ext_resource type="PackedScene" uid="uid://3apyyh41b6fh" path="res://scenes/lever.tscn" id="6_b2p4o"]
+[ext_resource type="PackedScene" uid="uid://co2uejkkf3y16" path="res://scenes/turret.tscn" id="7_j5ark"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86i2c"]
 size = Vector2(1014, 384)
 
 [node name="RowanTestScene" type="Node2D"]
 
-[node name="Player" parent="." groups=["canPushButton"] instance=ExtResource("1_wlsoq")]
+[node name="Player" parent="." instance=ExtResource("1_wlsoq")]
 position = Vector2(-69, -6)
 
 [node name="Button" parent="." node_paths=PackedStringArray("connectedNode") instance=ExtResource("2_5bbap")]
@@ -40,3 +41,6 @@ collision_layer = 2
 [node name="Lever" parent="." node_paths=PackedStringArray("connectedNode") instance=ExtResource("6_b2p4o")]
 position = Vector2(-155, -68)
 connectedNode = NodePath("../Door")
+
+[node name="Turret" parent="." instance=ExtResource("7_j5ark")]
+position = Vector2(-103, -24)
