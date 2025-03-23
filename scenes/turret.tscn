@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://co2uejkkf3y16"]
+
+[ext_resource type="Script" uid="uid://bjw5eib8u4uwa" path="res://scripts/turret.gd" id="1_el7wl"]
+[ext_resource type="Texture2D" uid="uid://dpdiojfvhu61c" path="res://icon.svg" id="1_x3mc5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3mc5"]
+size = Vector2(8, 8)
+
+[node name="Turret" type="StaticBody2D"]
+script = ExtResource("1_el7wl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 2.38419e-07)
+scale = Vector2(0.0625, 0.0625)
+texture = ExtResource("1_x3mc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_x3mc5")
+
+[node name="BULLETDIR" type="RayCast2D" parent="."]
+target_position = Vector2(20, 0)
+collide_with_bodies = false

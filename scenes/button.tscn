@@ -23,6 +23,8 @@ texture = ExtResource("1_mi6dp")
 polygon = PackedVector2Array(22, -4, 26, 0, -26, 0, -22, -4)
 
 [node name="ButtonPushed" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonPushed"]
 position = Vector2(0, -6.5)
