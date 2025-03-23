@@ -6,6 +6,9 @@
 
 [node name="BaseScene" instance=ExtResource("1_oua2f")]
 
+[node name="Player" parent="." index="3"]
+position = Vector2(35, 2)
+
 [node name="TEST LIGHT KILL LATER" parent="Player" index="4"]
 position = Vector2(0, 0)
 

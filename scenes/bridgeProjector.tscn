@@ -16,7 +16,7 @@ normal_texture = ExtResource("3_rt7e1")
 size = Vector2(11, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_485p4"]
-size = Vector2(1, 2)
+size = Vector2(1, 4)
 
 [node name="bridgeProjector" type="StaticBody2D"]
 script = ExtResource("1_rt7e1")
