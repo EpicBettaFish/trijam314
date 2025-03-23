@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://co2uejkkf3y16"]
+[gd_scene load_steps=9 format=3 uid="uid://co2uejkkf3y16"]
 
 [ext_resource type="Script" uid="uid://bmb8ogv330wpp" path="res://scripts/bridgeProjector.gd" id="1_rt7e1"]
 [ext_resource type="Texture2D" uid="uid://dfw7vusj6qakf" path="res://assets/sprites/bridge_generator.png" id="2_rt7e1"]
 [ext_resource type="Texture2D" uid="uid://c1g4igwqvune5" path="res://assets/sprites/bridge_generator_normal.png" id="3_rt7e1"]
+[ext_resource type="Texture2D" uid="uid://d06iqdk6qmph6" path="res://assets/sprites/bridge_beam.png" id="4_o3qgf"]
+
+[sub_resource type="Gradient" id="Gradient_o3qgf"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_485p4"]
 diffuse_texture = ExtResource("2_rt7e1")
@@ -16,6 +20,27 @@ size = Vector2(1, 2)
 
 [node name="bridgeProjector" type="StaticBody2D"]
 script = ExtResource("1_rt7e1")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -3)
+amount = 1
+lifetime = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(10, 1)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -1)
+initial_velocity_max = 3.0
+angular_velocity_min = -10.0
+angular_velocity_max = 10.0
+color_ramp = SubResource("Gradient_o3qgf")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(0, -3)
+width = 4.0
+default_color = Color(0.65098, 0.890196, 1, 1)
+texture = ExtResource("4_o3qgf")
+texture_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -6)
@@ -34,8 +59,3 @@ target_position = Vector2(1000, 0)
 [node name="bridgeCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -3)
 shape = SubResource("RectangleShape2D_485p4")
-
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(0, -3)
-width = 2.0
-default_color = Color(0.65098, 0.890196, 1, 1)

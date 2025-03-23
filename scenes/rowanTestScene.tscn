@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://rp0wkguvlsac"]
+[gd_scene load_steps=4 format=3 uid="uid://rp0wkguvlsac"]
 
 [ext_resource type="PackedScene" uid="uid://dyr4gk2ymlpgv" path="res://scenes/base_scene.tscn" id="1_oua2f"]
+[ext_resource type="PackedScene" uid="uid://b3yg5jhjt01ub" path="res://scenes/button.tscn" id="2_5bbap"]
 [ext_resource type="PackedScene" uid="uid://co2uejkkf3y16" path="res://scenes/bridgeProjector.tscn" id="2_wlsoq"]
 
 [node name="BaseScene" instance=ExtResource("1_oua2f")]
@@ -9,4 +10,7 @@
 position = Vector2(0, 0)
 
 [node name="bridgeProjector" parent="." index="4" instance=ExtResource("2_wlsoq")]
-position = Vector2(46, 16)
+position = Vector2(53, 16)
+
+[node name="Button" parent="." index="5" instance=ExtResource("2_5bbap")]
+position = Vector2(18, 8)
