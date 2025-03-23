@@ -1,5 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://rp0wkguvlsac"]
+[gd_scene load_steps=3 format=3 uid="uid://rp0wkguvlsac"]
 
 [ext_resource type="PackedScene" uid="uid://dyr4gk2ymlpgv" path="res://scenes/base_scene.tscn" id="1_oua2f"]
+[ext_resource type="PackedScene" uid="uid://co2uejkkf3y16" path="res://scenes/bridgeProjector.tscn" id="2_wlsoq"]
 
 [node name="BaseScene" instance=ExtResource("1_oua2f")]
+
+[node name="TEST LIGHT KILL LATER" parent="Player" index="4"]
+position = Vector2(0, 0)
+
+[node name="bridgeProjector" parent="." index="4" instance=ExtResource("2_wlsoq")]
+position = Vector2(74, 24)
+leftFacing = true
