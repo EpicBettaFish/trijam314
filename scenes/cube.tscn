@@ -3,15 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dpdiojfvhu61c" path="res://icon.svg" id="1_7ufek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufek"]
-size = Vector2(50, 50)
+size = Vector2(14, 14)
 
 [node name="Cube" type="RigidBody2D" groups=["canPushButton"]]
-collision_layer = 0
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.02656e-06, -2.02656e-06)
-scale = Vector2(0.390625, 0.390625)
+position = Vector2(-2.38419e-07, 4.76837e-07)
+scale = Vector2(0.109375, 0.109375)
 texture = ExtResource("1_7ufek")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
