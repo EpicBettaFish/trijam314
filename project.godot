@@ -14,6 +14,19 @@ config/name="trijam314"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
-[global_group]
+[display]
 
-canPushButton=""
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="viewport"
+
+[layer_names]
+
+2d_physics/layer_1="Environment"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Pushable"
+2d_physics/layer_4="Interactable"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
