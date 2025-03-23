@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 const SPEED = 50.0
 var jump_height = -125.0
+var push_force = 10.0
 
 
 func _physics_process(delta: float) -> void:
@@ -41,3 +42,8 @@ func _physics_process(delta: float) -> void:
 		velocity += real_grav * delta
 
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)

@@ -35,12 +35,16 @@ scale = Vector2(7.10938, 2.46094)
 texture = ExtResource("4_5mt6x")
 
 [node name="Cube" parent="." instance=ExtResource("5_86i2c")]
-position = Vector2(-30, -25)
-collision_layer = 2
+position = Vector2(-83, -7)
 
 [node name="Lever" parent="." node_paths=PackedStringArray("connectedNode") instance=ExtResource("6_b2p4o")]
 position = Vector2(-155, -68)
 connectedNode = NodePath("../Door")
 
 [node name="Turret" parent="." instance=ExtResource("7_j5ark")]
-position = Vector2(-103, -24)
+position = Vector2(-169, -8)
+
+[node name="BULLETDIR" parent="Turret" index="2"]
+rotation = -6.28318
+
+[editable path="Turret"]
