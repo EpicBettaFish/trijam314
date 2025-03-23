@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var player_sprite: Sprite2D = $PlayerSprite
 
 const SPEED = 50.0
-var jump_height = -200.0
+var jump_height = -125.0
 
 
 func _physics_process(delta: float) -> void:
@@ -37,9 +37,7 @@ func _physics_process(delta: float) -> void:
 
 		var real_grav = get_gravity()
 		if abs(velocity.y) < 30:
-			real_grav /= 6
+			real_grav /= 2
 		velocity += real_grav * delta
-
-
 
 	move_and_slide()
