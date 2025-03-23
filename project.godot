@@ -20,6 +20,10 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="viewport"
 
+[global_group]
+
+canPushButton=""
+
 [layer_names]
 
 2d_physics/layer_1="Environment"
