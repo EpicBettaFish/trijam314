@@ -9,5 +9,4 @@
 position = Vector2(0, 0)
 
 [node name="bridgeProjector" parent="." index="4" instance=ExtResource("2_wlsoq")]
-position = Vector2(74, 24)
-leftFacing = true
+position = Vector2(46, 16)
