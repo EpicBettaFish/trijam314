@@ -6,6 +6,8 @@
 size = Vector2(50, 50)
 
 [node name="Cube" type="RigidBody2D" groups=["canPushButton"]]
+collision_layer = 0
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2.02656e-06, -2.02656e-06)
