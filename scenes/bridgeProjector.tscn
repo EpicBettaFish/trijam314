@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://co2uejkkf3y16"]
+
+[ext_resource type="Script" uid="uid://bmb8ogv330wpp" path="res://scripts/bridgeProjector.gd" id="1_rt7e1"]
+[ext_resource type="Texture2D" uid="uid://dfw7vusj6qakf" path="res://assets/sprites/bridge_generator.png" id="2_rt7e1"]
+[ext_resource type="Texture2D" uid="uid://c1g4igwqvune5" path="res://assets/sprites/bridge_generator_normal.png" id="3_rt7e1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_485p4"]
+diffuse_texture = ExtResource("2_rt7e1")
+normal_texture = ExtResource("3_rt7e1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3mc5"]
+size = Vector2(11, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_485p4"]
+size = Vector2(1, 2)
+
+[node name="bridgeProjector" type="StaticBody2D"]
+script = ExtResource("1_rt7e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -6)
+texture = SubResource("CanvasTexture_485p4")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -4)
+shape = SubResource("RectangleShape2D_x3mc5")
+
+[node name="Raycast" type="RayCast2D" parent="."]
+position = Vector2(0, -3)
+target_position = Vector2(1000, 0)
+
+[node name="bridgeCollider" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -3)
+shape = SubResource("RectangleShape2D_485p4")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(0, -3)
+width = 2.0
+default_color = Color(0.65098, 0.890196, 1, 1)
