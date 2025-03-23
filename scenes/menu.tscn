@@ -108,6 +108,7 @@ font_color = Color(0.921892, 0, 0.343859, 1)
 script = ExtResource("1_vjb58")
 
 [node name="Darken" type="TextureRect" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 0.647059)
 anchors_preset = -1
 anchor_right = 24.0
@@ -117,6 +118,7 @@ grow_vertical = 2
 texture = SubResource("CanvasTexture_myx47")
 
 [node name="PausedMenu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -233,6 +235,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_myx47")
 text = "QUIT"
 
 [node name="SettingsMenu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -260,6 +263,35 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_wdbwj")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_pbf8f")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yt4k1")
 text = "BACK"
+
+[node name="APPLY" type="Button" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 20.3
+anchor_right = 24.0
+anchor_bottom = 1.9
+offset_left = -6.10352e-05
+offset_right = -6.10352e-05
+grow_horizontal = 0
+theme_override_colors/font_hover_color = Color(1, 1, 0.5, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0.913725, 0.929412, 0.94902, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0.141176, 1)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ndks8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_reqs4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7s4e5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_0rd3c")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tye54")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ovuwl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_edqit")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rqb4k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wdbwj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_pbf8f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yt4k1")
+text = "APPLY
+"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu"]
 layout_mode = 0
@@ -351,3 +383,4 @@ label_settings = SubResource("LabelSettings_vjb58")
 [connection signal="pressed" from="PausedMenu/SETTINGS" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="PausedMenu/QUIT" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="SettingsMenu/BACK" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="SettingsMenu/APPLY" to="." method="_on_apply_pressed"]

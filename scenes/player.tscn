@@ -101,6 +101,7 @@ radius = 1.5
 height = 11.0
 
 [node name="Player" type="CharacterBody2D" groups=["canPushButton", "player"]]
+position = Vector2(0, -6)
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_g2els")
@@ -123,3 +124,7 @@ shape = SubResource("CapsuleShape2D_g2els")
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_3vyb7")
 hframes = 11
+
+[node name="SizeChecker" type="RayCast2D" parent="."]
+position = Vector2(-0.5, 6)
+target_position = Vector2(0, -11)

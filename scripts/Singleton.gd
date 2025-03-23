@@ -1,6 +1,9 @@
 extends Node
 
-
+var volume = 50
+var machine_speed = 1
+var jump_height = 1
+var player_size = 1
 
 
 func _process(delta: float) -> void:
