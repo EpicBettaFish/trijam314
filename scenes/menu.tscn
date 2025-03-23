@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://deq7l2538xmmt"]
+[gd_scene load_steps=49 format=3 uid="uid://deq7l2538xmmt"]
 
 [ext_resource type="Script" uid="uid://cw6drc83ote1k" path="res://scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://cujp8qsv5q3ty" path="res://assets/sprites/Pixeled.ttf" id="2_con2f"]
@@ -99,26 +99,28 @@ font = ExtResource("2_con2f")
 font_size = 25
 font_color = Color(0.912, 0.929733, 0.95, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_vjb58"]
+font = ExtResource("2_con2f")
+font_size = 80
+font_color = Color(0.921892, 0, 0.343859, 1)
+
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_vjb58")
+
+[node name="Darken" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.647059)
+anchors_preset = -1
+anchor_right = 24.0
+anchor_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_myx47")
 
 [node name="PausedMenu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Darken" type="TextureRect" parent="PausedMenu"]
-modulate = Color(0, 0, 0, 0.364706)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 24.0
-anchor_bottom = 13.5
-offset_right = -6.10352e-05
-offset_bottom = -6.10352e-05
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("CanvasTexture_myx47")
 
 [node name="PAUSED" type="Label" parent="PausedMenu"]
 layout_mode = 1
@@ -211,10 +213,10 @@ offset_right = 577.0
 offset_bottom = 383.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_hover_color = Color(1, 1, 0.5, 1)
+theme_override_colors/font_hover_color = Color(0.999999, 0.457775, 0.545322, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.913725, 0.929412, 0.94902, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 0.141176, 1)
+theme_override_colors/font_pressed_color = Color(0.921569, 0, 0.345098, 1)
 theme_override_fonts/font = ExtResource("2_con2f")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_shxmr")
@@ -327,3 +329,25 @@ value = 1.0
 rounded = true
 tick_count = 3
 ticks_on_borders = true
+
+[node name="QuitLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -904.13
+offset_top = -389.82
+offset_right = -72.13
+offset_bottom = -165.82
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -0.0610865
+text = "screw you  :("
+label_settings = SubResource("LabelSettings_vjb58")
+
+[connection signal="pressed" from="PausedMenu/RESUME" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PausedMenu/SETTINGS" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PausedMenu/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SettingsMenu/BACK" to="." method="_on_back_pressed"]
