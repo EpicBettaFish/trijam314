@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	Singleton.jump_height = jump_height_slider.value
 	Singleton.player_size = player_size_slider.value
 	Singleton.machine_speed = machine_speed_slider.value
-	AudioServer.set_bus_volume_db(masterbus, linear_to_db(volume_slider.value))
+	AudioServer.set_bus_volume_db(masterbus, linear_to_db(volume_slider.value/100))
 
 
 func _on_resume_pressed() -> void:

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://wbkve0vtr2vg" path="res://assets/sprites/background_tiles.png" id="3_ha2ph"]
 [ext_resource type="Texture2D" uid="uid://wdbdcpifo6gm" path="res://assets/sprites/overgrowth.png" id="3_pmxr0"]
 [ext_resource type="Texture2D" uid="uid://cc7dokfjktwcd" path="res://assets/sprites/foreground_elements.png" id="4_osw8o"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="5_pmxr0"]
+[ext_resource type="PackedScene" uid="uid://bcff0f6mvl086" path="res://scenes/player.tscn" id="5_pmxr0"]
 [ext_resource type="PackedScene" uid="uid://deq7l2538xmmt" path="res://scenes/menu.tscn" id="7_e5sna"]
 [ext_resource type="Shader" uid="uid://dsottqlsp70a0" path="res://scenes/sway.gdshader" id="8_vjnli"]
 [ext_resource type="Texture2D" uid="uid://dti42imxlwd5w" path="res://assets/sprites/doodads.png" id="9_oelfw"]
@@ -571,3 +571,4 @@ environment = SubResource("Environment_oelfw")
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_yfdfb")
 autoplay = true
+bus = &"MUSIC"

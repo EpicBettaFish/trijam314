@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceas6uebeekbs"]
+[gd_scene load_steps=10 format=3 uid="uid://bcff0f6mvl086"]
 
 [ext_resource type="Texture2D" uid="uid://cohk53g0wdyr4" path="res://assets/sprites/player.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://q33nqwlfc327" path="res://scripts/player.gd" id="1_g2els"]
@@ -130,3 +130,8 @@ hframes = 11
 position = Vector2(-0.5, -1)
 target_position = Vector2(0, -10)
 hit_from_inside = true
+
+[node name="Feet" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[connection signal="finished" from="Feet" to="." method="_on_feet_finished"]
