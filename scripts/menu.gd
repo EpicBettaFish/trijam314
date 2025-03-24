@@ -58,7 +58,7 @@ func _on_quit_pressed() -> void:
 	settings_menu.visible = false
 	darken.modulate = Color.BLACK
 	quit_label.visible = true
-	get_tree().quit
+	get_tree().quit()
 
 
 func _on_settings_pressed() -> void:
@@ -77,4 +77,4 @@ func _on_back_pressed() -> void:
 
 func _on_stuck_pressed() -> void:
 	# *****TEMPORARY***** should set to last checkpoint
-	get_tree().quit
+	get_tree().quit()
