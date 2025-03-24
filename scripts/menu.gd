@@ -26,17 +26,22 @@ func _process(delta: float) -> void:
 			# pause and open menu
 			get_tree().paused = true
 			paused_menu.visible = true
+			settings_menu.visible = false
 			darken.visible = true
 		elif paused_menu.visible == true:
 			# unpause and close menu
 			get_tree().paused = false
 			paused_menu.visible = false
+			settings_menu.visible = false
 			darken.visible = false
 		elif settings_menu.visible == true:
 			# leave settings menu and open paused menu
 			paused_menu.visible = true
 			settings_menu.visible = false
-		
+	Singleton.jump_height = jump_height_slider.value
+	Singleton.player_size = player_size_slider.value
+	Singleton.machine_speed = machine_speed_slider.value
+	AudioServer.set_bus_volume_db(masterbus, linear_to_db(volume_slider.value))
 
 
 func _on_resume_pressed() -> void:
@@ -64,10 +69,3 @@ func _on_back_pressed() -> void:
 	# leave settings menu and open paused menu
 	paused_menu.visible = true
 	settings_menu.visible = false
-
-
-func _on_apply_pressed() -> void:
-	Singleton.jump_height = jump_height_slider.value
-	Singleton.player_size = player_size_slider.value
-	Singleton.machine_speed = machine_speed_slider.value
-	AudioServer.set_bus_volume_db(masterbus, linear_to_db(volume_slider.value))
