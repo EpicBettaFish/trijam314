@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cujp8qsv5q3ty"
-path="res://.godot/imported/Pixeled.ttf-8439ed2ff760d1655fde70707e2758bb.fontdata"
+path="res://.godot/imported/Pixeled.ttf-f476bd2ac9b8fffb04cfede239d28e43.fontdata"
 
 [deps]
 
-source_file="res://assets/Pixeled.ttf"
-dest_files=["res://.godot/imported/Pixeled.ttf-8439ed2ff760d1655fde70707e2758bb.fontdata"]
+source_file="res://assets/sprites/Pixeled.ttf"
+dest_files=["res://.godot/imported/Pixeled.ttf-f476bd2ac9b8fffb04cfede239d28e43.fontdata"]
 
 [params]
 

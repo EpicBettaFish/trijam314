@@ -12,6 +12,7 @@ script = ExtResource("1_uvdjg")
 [node name="Collider" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Collider"]
+z_index = -1
 position = Vector2(0, 12)
 scale = Vector2(0.5, 1)
 texture = ExtResource("2_uvdjg")

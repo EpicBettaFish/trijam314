@@ -111,15 +111,22 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -6)
 scale = Vector2(1.00968, 0.352718)
 zoom = Vector2(6, 6)
 process_callback = 0
 position_smoothing_enabled = true
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-0.5, -5.5)
 shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
 texture = ExtResource("1_3vyb7")
 hframes = 11
+
+[node name="SizeChecker" type="RayCast2D" parent="."]
+position = Vector2(-0.5, 0)
+target_position = Vector2(0, -11)
+hit_from_inside = true

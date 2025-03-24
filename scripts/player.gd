@@ -4,11 +4,30 @@ extends CharacterBody2D
 @onready var player_sprite: Sprite2D = $PlayerSprite
 
 const SPEED = 50.0
-var jump_height = -125.0
+var jump = -125.0
 var push_force = 10.0
+@onready var size_checker: RayCast2D = $SizeChecker
 
 
 func _physics_process(delta: float) -> void:
+	# settings jump height setter
+	if Singleton.jump_height == 0:
+		jump = -62.5
+	elif Singleton.jump_height == 1:
+		jump = -125.0
+	else:
+		jump = -200
+		
+	if Singleton.player_size == 0:
+		scale = Vector2(.5,.5)
+	elif Singleton.player_size == 1:
+		scale = Vector2(1,1)
+	else:
+		scale = Vector2(2,2)
+		
+	if size_checker.is_colliding():
+		get_tree().quit
+
 	# player controls
 	var direction := Input.get_axis("left", "right")
 	if direction:
@@ -22,7 +41,7 @@ func _physics_process(delta: float) -> void:
 	
 	# jump
 	if Input.is_action_pressed("jump") and is_on_floor():
-		velocity.y = jump_height
+		velocity.y = jump
 		
 	# player animations
 	if is_on_floor():
