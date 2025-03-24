@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp41fugu1ykmr"]
+[gd_scene load_steps=7 format=3 uid="uid://cp41fugu1ykmr"]
 
 [ext_resource type="Script" uid="uid://busp52uq7h81h" path="res://scripts/cube.gd" id="1_8viuf"]
 [ext_resource type="Texture2D" uid="uid://crplfin0eomri" path="res://assets/sprites/box.png" id="2_i7q2r"]
@@ -9,12 +9,16 @@ diffuse_texture = ExtResource("2_i7q2r")
 normal_texture = ExtResource("3_0d7ej")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7q2r"]
-size = Vector2(10, 10)
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0d7ej"]
+size = Vector2(2, 2)
 
 [node name="Cube" type="RigidBody2D" groups=["canPushButton"]]
-collision_layer = 4
-collision_mask = 7
+collision_mask = 3
+mass = 0.7
 gravity_scale = 0.5
+can_sleep = false
 script = ExtResource("1_8viuf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["canPushButton"]]
@@ -23,3 +27,21 @@ texture = SubResource("CanvasTexture_fu8w0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i7q2r")
+
+[node name="Unstuck" type="Node2D" parent="."]
+top_level = true
+
+[node name="Left" type="Area2D" parent="Unstuck"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Unstuck/Left"]
+position = Vector2(-5, 0)
+shape = SubResource("RectangleShape2D_0d7ej")
+
+[node name="Right" type="Area2D" parent="Unstuck"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Unstuck/Right"]
+position = Vector2(5, 0)
+shape = SubResource("RectangleShape2D_0d7ej")
+
+[connection signal="body_entered" from="Unstuck/Left" to="." method="_on_left_body_entered"]
+[connection signal="body_entered" from="Unstuck/Right" to="." method="_on_right_body_entered"]
