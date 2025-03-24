@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		
 	if size_checker.is_colliding():
 		# *****TEMPORARY***** should set to last checkpoint
-		get_tree().quit()
+		get_parent().die()
 
 	# player controls
 	var direction := Input.get_axis("left", "right")
