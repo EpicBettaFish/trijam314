@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://b05u0p5i5xc2f"]
+[gd_scene load_steps=59 format=4 uid="uid://b05u0p5i5xc2f"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3p2gp"]
 [ext_resource type="Texture2D" uid="uid://cldpsq0c3g8ph" path="res://assets/sprites/tile.png" id="1_c01mt"]
@@ -35,6 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://dix28i5vx6wo6" path="res://assets/audio/scott5-1.mp3" id="28_g6wdg"]
 [ext_resource type="AudioStream" uid="uid://b4u1ndoiovqyy" path="res://assets/audio/jude5-1.mp3" id="29_hq6as"]
 [ext_resource type="AudioStream" uid="uid://ds0serwokwlso" path="res://assets/audio/scott5-2.mp3" id="30_kxyth"]
+[ext_resource type="AudioStream" uid="uid://dkdxs4bvki830" path="res://assets/audio/jude6-1.mp3" id="31_8b871"]
 [ext_resource type="AudioStream" uid="uid://b0tnctdt44hc" path="res://assets/audio/scott7-1.mp3" id="31_kxyth"]
 [ext_resource type="AudioStream" uid="uid://cgjbi1kotqx4q" path="res://assets/audio/jude7-1.mp3" id="32_cobve"]
 [ext_resource type="AudioStream" uid="uid://4atwv3y6w8by" path="res://assets/audio/jude8-1.mp3" id="33_cobve"]
@@ -887,7 +888,7 @@ position = Vector2(1284, 51)
 shape = SubResource("RectangleShape2D_3p2gp")
 
 [node name="Checkpoint" type="Area2D" parent="."]
-position = Vector2(-8, -45)
+position = Vector2(99, -1)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
@@ -896,14 +897,143 @@ script = ExtResource("16_cvmbd")
 position = Vector2(3, -1)
 shape = SubResource("RectangleShape2D_cvmbd")
 
+[node name="Checkpoint2" type="Area2D" parent="."]
+position = Vector2(271, -40)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint2"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint3" type="Area2D" parent="."]
+position = Vector2(388, -47)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint3"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint4" type="Area2D" parent="."]
+position = Vector2(547, 9)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint4"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint5" type="Area2D" parent="."]
+position = Vector2(830, 48)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint5"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint6" type="Area2D" parent="."]
+position = Vector2(1136, 27)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint6"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint7" type="Area2D" parent="."]
+position = Vector2(1447, 40)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint7"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint8" type="Area2D" parent="."]
+position = Vector2(1778, 73)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint8"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="Checkpoint9" type="Area2D" parent="."]
+position = Vector2(1580, 40)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint9"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
 [node name="DeathZone" type="Area2D" parent="."]
-position = Vector2(-39, -45)
+position = Vector2(618, 111)
+scale = Vector2(6, 1)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
 isDeath = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="DeathZone2" type="Area2D" parent="."]
+position = Vector2(979, 80)
+scale = Vector2(6, 1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+isDeath = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone2"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="DeathZone3" type="Area2D" parent="."]
+position = Vector2(1172, 116)
+scale = Vector2(6, 1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+isDeath = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone3"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="DeathZone4" type="Area2D" parent="."]
+position = Vector2(1323, 111)
+scale = Vector2(6, 1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+isDeath = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone4"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_cvmbd")
+
+[node name="DeathZone5" type="Area2D" parent="."]
+position = Vector2(1644, 136)
+scale = Vector2(8, 1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_cvmbd")
+isDeath = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone5"]
 position = Vector2(3, -1)
 shape = SubResource("RectangleShape2D_cvmbd")
 
@@ -935,8 +1065,12 @@ position = Vector2(178, -10)
 streams = Array[AudioStream]([ExtResource("27_dg70y")])
 
 [node name="DialogCutscene4" parent="." instance=ExtResource("20_2ofn6")]
-position = Vector2(514, 8)
+position = Vector2(390, -49)
 streams = Array[AudioStream]([ExtResource("28_g6wdg"), ExtResource("29_hq6as"), ExtResource("30_kxyth")])
+
+[node name="DialogCutscene8" parent="." instance=ExtResource("20_2ofn6")]
+position = Vector2(510, 3)
+streams = Array[AudioStream]([ExtResource("31_8b871")])
 
 [node name="DialogCutscene5" parent="." instance=ExtResource("20_2ofn6")]
 position = Vector2(775, 34)
@@ -954,7 +1088,19 @@ streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), 
 position = Vector2(1863, 8)
 
 [connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint2" to="Checkpoint2" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint3" to="Checkpoint3" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint4" to="Checkpoint4" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint5" to="Checkpoint5" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint6" to="Checkpoint6" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint7" to="Checkpoint7" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint8" to="Checkpoint8" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint9" to="Checkpoint9" method="_on_body_entered"]
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
+[connection signal="body_entered" from="DeathZone2" to="DeathZone2" method="_on_body_entered"]
+[connection signal="body_entered" from="DeathZone3" to="DeathZone3" method="_on_body_entered"]
+[connection signal="body_entered" from="DeathZone4" to="DeathZone4" method="_on_body_entered"]
+[connection signal="body_entered" from="DeathZone5" to="DeathZone5" method="_on_body_entered"]
 
 [editable path="Elements/Turret2"]
 [editable path="Elements/Turret4"]
