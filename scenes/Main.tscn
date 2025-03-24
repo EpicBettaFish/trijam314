@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://b05u0p5i5xc2f"]
+[gd_scene load_steps=58 format=4 uid="uid://b05u0p5i5xc2f"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3p2gp"]
 [ext_resource type="Texture2D" uid="uid://cldpsq0c3g8ph" path="res://assets/sprites/tile.png" id="1_c01mt"]
@@ -20,14 +20,26 @@
 [ext_resource type="Shader" uid="uid://dsottqlsp70a0" path="res://scenes/sway.gdshader" id="18_nfivy"]
 [ext_resource type="Texture2D" uid="uid://dti42imxlwd5w" path="res://assets/sprites/doodads.png" id="19_1nqs0"]
 [ext_resource type="PackedScene" uid="uid://ibgi54p8wpvf" path="res://scenes/dialogue_cutscene.tscn" id="20_2ofn6"]
+[ext_resource type="AudioStream" uid="uid://caiuy21mcv7xa" path="res://assets/audio/scott2-1.mp3" id="21_v0vrg"]
 [ext_resource type="AudioStream" uid="uid://bbpbatdy8y14y" path="res://assets/audio/scott0-1.mp3" id="21_xa025"]
 [ext_resource type="AudioStream" uid="uid://mucuxwcdr15n" path="res://assets/audio/jude0-1.mp3" id="22_36rkl"]
+[ext_resource type="AudioStream" uid="uid://beofkyicmo1h1" path="res://assets/audio/jude2-1.mp3" id="22_dg70y"]
 [ext_resource type="AudioStream" uid="uid://4o2a156ofr41" path="res://assets/audio/scott0-2.mp3" id="23_fs0b5"]
+[ext_resource type="AudioStream" uid="uid://cffmxtnoltxdt" path="res://assets/audio/scott2-2.mp3" id="23_pnhog"]
 [ext_resource type="AudioStream" uid="uid://bq0rd84rf36j8" path="res://assets/audio/jude0-2.mp3" id="24_ma7h6"]
 [ext_resource type="AudioStream" uid="uid://dufahn2exiwer" path="res://assets/audio/jude1-1.mp3" id="25_ma7h6"]
 [ext_resource type="PackedScene" uid="uid://cs8raj2p0sn66" path="res://scenes/artifact.tscn" id="25_xa025"]
 [ext_resource type="AudioStream" uid="uid://c5n0u1b6y0upx" path="res://assets/audio/scott1-1.mp3" id="26_e2s0e"]
+[ext_resource type="AudioStream" uid="uid://di5gp5jam7uub" path="res://assets/audio/scott3-1.mp3" id="27_dg70y"]
 [ext_resource type="AudioStream" uid="uid://dw8yltf8qm2yg" path="res://assets/audio/jude1-2.mp3" id="27_gsxep"]
+[ext_resource type="AudioStream" uid="uid://dix28i5vx6wo6" path="res://assets/audio/scott5-1.mp3" id="28_g6wdg"]
+[ext_resource type="AudioStream" uid="uid://b4u1ndoiovqyy" path="res://assets/audio/jude5-1.mp3" id="29_hq6as"]
+[ext_resource type="AudioStream" uid="uid://ds0serwokwlso" path="res://assets/audio/scott5-2.mp3" id="30_kxyth"]
+[ext_resource type="AudioStream" uid="uid://b0tnctdt44hc" path="res://assets/audio/scott7-1.mp3" id="31_kxyth"]
+[ext_resource type="AudioStream" uid="uid://cgjbi1kotqx4q" path="res://assets/audio/jude7-1.mp3" id="32_cobve"]
+[ext_resource type="AudioStream" uid="uid://4atwv3y6w8by" path="res://assets/audio/jude8-1.mp3" id="33_cobve"]
+[ext_resource type="AudioStream" uid="uid://38k16q1iix4x" path="res://assets/audio/scott10-1.mp3" id="38_8cp6k"]
+[ext_resource type="AudioStream" uid="uid://bydhjo6423c2k" path="res://assets/audio/jude10-1.mp3" id="39_8b871"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mryrf"]
 texture = ExtResource("3_jlsqs")
@@ -911,32 +923,32 @@ tile_map_data = PackedByteArray("AAACAAAAAAABAAAAAAAFAAAAAAABAAAAAAAEAAAAAAACAAA
 tile_set = SubResource("TileSet_ebg2g")
 
 [node name="DialogCutscene" parent="." instance=ExtResource("20_2ofn6")]
-position = Vector2(-95, -15)
-streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6")])
+position = Vector2(117, -9)
+streams = Array[AudioStream]([ExtResource("21_v0vrg"), ExtResource("22_dg70y"), ExtResource("23_pnhog")])
 
 [node name="DialogCutscene2" parent="." instance=ExtResource("20_2ofn6")]
-position = Vector2(119, -3)
+position = Vector2(-93, -13)
 streams = Array[AudioStream]([ExtResource("25_ma7h6"), ExtResource("26_e2s0e"), ExtResource("27_gsxep")])
 
 [node name="DialogCutscene3" parent="." instance=ExtResource("20_2ofn6")]
-position = Vector2(180, -6)
-streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6")])
+position = Vector2(178, -10)
+streams = Array[AudioStream]([ExtResource("27_dg70y")])
 
 [node name="DialogCutscene4" parent="." instance=ExtResource("20_2ofn6")]
 position = Vector2(514, 8)
-streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6")])
+streams = Array[AudioStream]([ExtResource("28_g6wdg"), ExtResource("29_hq6as"), ExtResource("30_kxyth")])
 
 [node name="DialogCutscene5" parent="." instance=ExtResource("20_2ofn6")]
 position = Vector2(775, 34)
-streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6")])
+streams = Array[AudioStream]([ExtResource("31_kxyth"), ExtResource("32_cobve")])
 
 [node name="DialogCutscene6" parent="." instance=ExtResource("20_2ofn6")]
 position = Vector2(1150, 14)
-streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6")])
+streams = Array[AudioStream]([ExtResource("33_cobve")])
 
 [node name="DialogCutscene7" parent="." instance=ExtResource("20_2ofn6")]
 position = Vector2(1798, 63)
-streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6")])
+streams = Array[AudioStream]([ExtResource("21_xa025"), ExtResource("22_36rkl"), ExtResource("23_fs0b5"), ExtResource("24_ma7h6"), ExtResource("38_8cp6k"), ExtResource("39_8b871")])
 
 [node name="Node" parent="." instance=ExtResource("25_xa025")]
 position = Vector2(1863, 8)

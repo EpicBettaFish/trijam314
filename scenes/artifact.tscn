@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs8raj2p0sn66"]
+[gd_scene load_steps=9 format=3 uid="uid://cs8raj2p0sn66"]
 
 [ext_resource type="Texture2D" uid="uid://dams5et3hk1io" path="res://assets/sprites/artifact.png" id="1_0lcuo"]
 [ext_resource type="Script" uid="uid://8sib2ytvvfby" path="res://scripts/artifact.gd" id="1_a37it"]
@@ -95,6 +95,9 @@ _data = {
 &"go": SubResource("Animation_7gita")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_a37it"]
+radius = 7.0
+
 [node name="Node" type="Node2D"]
 script = ExtResource("1_a37it")
 
@@ -128,3 +131,12 @@ modulate = Color(0.988667, 0.66, 1, 0.490196)
 z_index = -1
 rotation = -0.866888
 texture = ExtResource("2_7gita")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_a37it")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
