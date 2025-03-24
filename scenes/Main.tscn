@@ -510,7 +510,7 @@ tile_map_data = PackedByteArray("AAALAAcAAAACAAEAAAALAAYAAAACAAEAAAALAAUAAAACAAE
 tile_set = SubResource("TileSet_pmxr0")
 
 [node name="Player" parent="." instance=ExtResource("6_wp0k4")]
-position = Vector2(346, -38)
+position = Vector2(8, 8)
 
 [node name="TEST LIGHT KILL LATER" type="PointLight2D" parent="Player"]
 position = Vector2(0, -6)
@@ -544,7 +544,6 @@ position = Vector2(88, -15)
 
 [node name="Cube" parent="Elements" instance=ExtResource("9_lhr70")]
 position = Vector2(25, 4)
-lock_rotation = false
 
 [node name="Lever" parent="Elements" node_paths=PackedStringArray("connectedNode") instance=ExtResource("10_lhr70")]
 position = Vector2(194, -76)

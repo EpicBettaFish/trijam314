@@ -128,5 +128,5 @@ hframes = 11
 
 [node name="SizeChecker" type="RayCast2D" parent="."]
 position = Vector2(-0.5, -1)
-target_position = Vector2(0.5, -10)
+target_position = Vector2(0, -10)
 hit_from_inside = true
