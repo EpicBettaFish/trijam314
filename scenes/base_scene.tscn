@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://wbkve0vtr2vg" path="res://assets/sprites/background_tiles.png" id="3_ha2ph"]
 [ext_resource type="Texture2D" uid="uid://wdbdcpifo6gm" path="res://assets/sprites/overgrowth.png" id="3_pmxr0"]
 [ext_resource type="Texture2D" uid="uid://cc7dokfjktwcd" path="res://assets/sprites/foreground_elements.png" id="4_osw8o"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="5_pmxr0"]
+[ext_resource type="PackedScene" uid="uid://ceas6uebeekbs" path="res://scenes/player.tscn" id="5_pmxr0"]
 [ext_resource type="PackedScene" uid="uid://deq7l2538xmmt" path="res://scenes/menu.tscn" id="7_e5sna"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_bkknn"]
