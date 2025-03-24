@@ -8,7 +8,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_5d2l8"]
 font = ExtResource("2_con2f")
 font_size = 50
-font_color = Color(0.912, 0.929733, 0.95, 1)
+font_color = Color(0.913725, 0.929412, 0.94902, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4r4p"]
 
@@ -118,7 +118,6 @@ grow_vertical = 2
 texture = SubResource("CanvasTexture_myx47")
 
 [node name="PausedMenu" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -130,9 +129,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 310.0
-offset_top = 32.0
+offset_top = 22.0
 offset_right = 610.0
-offset_bottom = 172.0
+offset_bottom = 162.0
 grow_horizontal = 2
 text = "PAUSED"
 label_settings = SubResource("LabelSettings_5d2l8")
@@ -145,15 +144,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 361.0
-offset_top = 165.0
+offset_top = 155.0
 offset_right = 559.0
-offset_bottom = 235.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_hover_color = Color(1, 1, 0.5, 1)
+theme_override_colors/font_hover_color = Color(0.66, 0.864, 1, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.913725, 0.929412, 0.94902, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 0.14, 1)
+theme_override_colors/font_pressed_color = Color(0.27, 0.708, 1, 1)
 theme_override_fonts/font = ExtResource("2_con2f")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v4r4p")
@@ -202,6 +201,39 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_myx47")
 text = "SETTINGS
 "
 
+[node name="STUCK" type="Button" parent="PausedMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 369.0
+offset_top = 323.0
+offset_right = 551.0
+offset_bottom = 393.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.999999, 0.457775, 0.545322, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0.913725, 0.929412, 0.94902, 1)
+theme_override_colors/font_pressed_color = Color(0.921569, 0, 0.345098, 1)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_shxmr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5wegr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ns75t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_s8k84")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dmw1k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_3hsps")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7l7mv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_vtr1r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a1ndm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_etf8b")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_myx47")
+text = "STUCK
+"
+
 [node name="QUIT" type="Button" parent="PausedMenu"]
 layout_mode = 1
 anchors_preset = 8
@@ -209,10 +241,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 343.0
-offset_top = 313.0
-offset_right = 577.0
-offset_bottom = 383.0
+offset_left = 391.0
+offset_top = 408.0
+offset_right = 528.0
+offset_bottom = 478.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.999999, 0.457775, 0.545322, 1)
@@ -352,5 +384,6 @@ label_settings = SubResource("LabelSettings_vjb58")
 
 [connection signal="pressed" from="PausedMenu/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PausedMenu/SETTINGS" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PausedMenu/STUCK" to="." method="_on_stuck_pressed"]
 [connection signal="pressed" from="PausedMenu/QUIT" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="SettingsMenu/BACK" to="." method="_on_back_pressed"]
