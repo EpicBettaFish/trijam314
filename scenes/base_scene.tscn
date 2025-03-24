@@ -570,3 +570,4 @@ environment = SubResource("Environment_oelfw")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_yfdfb")
+autoplay = true
