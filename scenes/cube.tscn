@@ -8,12 +8,11 @@
 diffuse_texture = ExtResource("2_i7q2r")
 normal_texture = ExtResource("3_0d7ej")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufek"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7q2r"]
 size = Vector2(10, 10)
 
 [node name="Cube" type="RigidBody2D" groups=["canPushButton"]]
 collision_mask = 3
-lock_rotation = true
 script = ExtResource("1_8viuf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["canPushButton"]]
@@ -21,4 +20,4 @@ position = Vector2(-2.38419e-07, 4.76837e-07)
 texture = SubResource("CanvasTexture_fu8w0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_7ufek")
+shape = SubResource("RectangleShape2D_i7q2r")
