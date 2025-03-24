@@ -48,6 +48,8 @@ func _on_resume_pressed() -> void:
 	# resume
 	get_tree().paused = false
 	paused_menu.visible = false
+	settings_menu.visible = false
+	darken.visible = false
 
 
 func _on_quit_pressed() -> void:
@@ -69,3 +71,10 @@ func _on_back_pressed() -> void:
 	# leave settings menu and open paused menu
 	paused_menu.visible = true
 	settings_menu.visible = false
+
+
+
+
+func _on_stuck_pressed() -> void:
+	# *****TEMPORARY***** should set to last checkpoint
+	get_tree().quit
