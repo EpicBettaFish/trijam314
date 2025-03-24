@@ -3,6 +3,7 @@ extends Node2D
 var tween
 @onready var doorCollider = $Collider
 
+
 func activate() -> void:
 	$Collider/Sprite2D.frame = 1
 	if tween:

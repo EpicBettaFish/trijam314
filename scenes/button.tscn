@@ -11,7 +11,7 @@ size = Vector2(8, 1)
 diffuse_texture = ExtResource("2_rhj8v")
 normal_texture = ExtResource("3_3q610")
 
-[node name="Button" type="StaticBody2D"]
+[node name="Button" type="StaticBody2D" groups=["savesAtCheckpoints"]]
 collision_layer = 4
 script = ExtResource("1_rhj8v")
 
@@ -34,7 +34,7 @@ hframes = 2
 [node name="BallCatch" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="BallCatch"]
-polygon = PackedVector2Array(5, -3, 9, 0, -9, 0, -5, -3, 0, -1)
+polygon = PackedVector2Array(5, -3, 9, 0, -9, 0, -5, -3, 0, 0)
 
 [connection signal="body_entered" from="ButtonPushed" to="." method="_on_button_pushed_body_entered"]
 [connection signal="body_exited" from="ButtonPushed" to="." method="_on_button_pushed_body_exited"]

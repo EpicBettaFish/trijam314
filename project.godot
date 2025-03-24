@@ -29,6 +29,7 @@ window/stretch/mode="viewport"
 
 canPushButton=""
 player=""
+savesAtCheckpoints=""
 
 [input]
 

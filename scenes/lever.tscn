@@ -9,7 +9,7 @@ size = Vector2(21.5, 3)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8di2w"]
 size = Vector2(5, 10)
 
-[node name="Lever" type="StaticBody2D"]
+[node name="Lever" type="StaticBody2D" groups=["savesAtCheckpoints"]]
 script = ExtResource("1_qxmkn")
 
 [node name="LeverHandle" type="Area2D" parent="."]

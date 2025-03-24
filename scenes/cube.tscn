@@ -13,7 +13,7 @@ normal_texture = ExtResource("3_0d7ej")
 [sub_resource type="CircleShape2D" id="CircleShape2D_i7q2r"]
 radius = 4.0
 
-[node name="Cube" type="RigidBody2D" groups=["canPushButton"]]
+[node name="Cube" type="RigidBody2D" groups=["canPushButton", "savesAtCheckpoints"]]
 collision_mask = 19
 physics_material_override = SubResource("PhysicsMaterial_i7q2r")
 can_sleep = false
