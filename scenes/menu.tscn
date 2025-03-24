@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://deq7l2538xmmt"]
+[gd_scene load_steps=50 format=3 uid="uid://deq7l2538xmmt"]
 
 [ext_resource type="Script" uid="uid://cw6drc83ote1k" path="res://scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://cujp8qsv5q3ty" path="res://assets/sprites/Pixeled.ttf" id="2_con2f"]
@@ -8,6 +8,11 @@
 [sub_resource type="LabelSettings" id="LabelSettings_5d2l8"]
 font = ExtResource("2_con2f")
 font_size = 50
+font_color = Color(0.913725, 0.929412, 0.94902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_con2f"]
+font = ExtResource("2_con2f")
+font_size = 10
 font_color = Color(0.913725, 0.929412, 0.94902, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4r4p"]
@@ -105,6 +110,7 @@ font_size = 80
 font_color = Color(0.921892, 0, 0.343859, 1)
 
 [node name="Menu" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_vjb58")
 
 [node name="Darken" type="TextureRect" parent="."]
@@ -136,6 +142,21 @@ offset_bottom = 162.0
 grow_horizontal = 2
 text = "PAUSED"
 label_settings = SubResource("LabelSettings_5d2l8")
+
+[node name="PAUSED2" type="Label" parent="PausedMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 629.0
+offset_top = 12.0
+offset_right = 929.0
+offset_bottom = 152.0
+grow_horizontal = 2
+text = "ESC or BACKSPACE
+to pause and unpause"
+label_settings = SubResource("LabelSettings_con2f")
+horizontal_alignment = 2
 
 [node name="RESUME" type="Button" parent="PausedMenu"]
 layout_mode = 1

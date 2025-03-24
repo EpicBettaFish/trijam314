@@ -16,7 +16,10 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	process_mode = PROCESS_MODE_ALWAYS
+	get_tree().paused = true
+	paused_menu.visible = true
+	settings_menu.visible = false
+	darken.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -77,4 +80,6 @@ func _on_back_pressed() -> void:
 
 func _on_stuck_pressed() -> void:
 	# *****TEMPORARY***** should set to last checkpoint
-	get_tree().quit()
+	
+	get_parent().die()
+	_on_resume_pressed()
