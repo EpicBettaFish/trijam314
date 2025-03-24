@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="trijam314"
-run/main_scene="uid://b05u0p5i5xc2f"
+run/main_scene="uid://c6deyvaw868aq"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
