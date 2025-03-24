@@ -980,7 +980,6 @@ shape = SubResource("RectangleShape2D_cvmbd")
 [node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(618, 111)
 scale = Vector2(6, 1)
-collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
 isDeath = true
@@ -992,7 +991,6 @@ shape = SubResource("RectangleShape2D_cvmbd")
 [node name="DeathZone2" type="Area2D" parent="."]
 position = Vector2(979, 80)
 scale = Vector2(6, 1)
-collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
 isDeath = true
@@ -1004,7 +1002,6 @@ shape = SubResource("RectangleShape2D_cvmbd")
 [node name="DeathZone3" type="Area2D" parent="."]
 position = Vector2(1172, 116)
 scale = Vector2(6, 1)
-collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
 isDeath = true
@@ -1016,7 +1013,6 @@ shape = SubResource("RectangleShape2D_cvmbd")
 [node name="DeathZone4" type="Area2D" parent="."]
 position = Vector2(1323, 111)
 scale = Vector2(6, 1)
-collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
 isDeath = true
@@ -1028,7 +1024,6 @@ shape = SubResource("RectangleShape2D_cvmbd")
 [node name="DeathZone5" type="Area2D" parent="."]
 position = Vector2(1644, 136)
 scale = Vector2(8, 1)
-collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_cvmbd")
 isDeath = true

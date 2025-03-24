@@ -21,3 +21,10 @@ func loadCheckpoint() -> void:
 	global_transform.origin = savedPos
 	linear_velocity = Vector2(0,0)
 	angular_velocity = 0
+
+
+func _on_die_area_entered(area: Area2D) -> void:
+	if "Death" in str(area):
+		global_transform.origin = savedPos
+		linear_velocity = Vector2(0,0)
+		angular_velocity = 0

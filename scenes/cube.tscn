@@ -25,3 +25,10 @@ texture = SubResource("CanvasTexture_fu8w0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i7q2r")
+
+[node name="die" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="die"]
+shape = SubResource("CircleShape2D_i7q2r")
+
+[connection signal="area_entered" from="die" to="." method="_on_die_area_entered"]

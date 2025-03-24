@@ -11,6 +11,10 @@ func _ready() -> void:
 	realShootingInterval = shootingInterval
 	timerLoop()
 
+func _process(delta: float) -> void:
+	if Singleton.machine_speed > 0:
+		if $BULLETDIR/DeathCast.is_colliding():
+			get_parent().get_parent().die()
 
 func timerLoop() -> void:
 	match Singleton.machine_speed:
