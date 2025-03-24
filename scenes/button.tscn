@@ -5,13 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://dv136lseppt5v" path="res://assets/sprites/button_norm.png" id="3_3q610"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi6dp"]
-size = Vector2(10, 1)
+size = Vector2(8, 1)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3q610"]
 diffuse_texture = ExtResource("2_rhj8v")
 normal_texture = ExtResource("3_3q610")
 
 [node name="Button" type="StaticBody2D"]
+collision_layer = 4
 script = ExtResource("1_rhj8v")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -29,6 +30,11 @@ shape = SubResource("RectangleShape2D_mi6dp")
 position = Vector2(0, -8)
 texture = SubResource("CanvasTexture_3q610")
 hframes = 2
+
+[node name="BallCatch" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="BallCatch"]
+polygon = PackedVector2Array(5, -3, 9, 0, -9, 0, -5, -3, 0, -1)
 
 [connection signal="body_entered" from="ButtonPushed" to="." method="_on_button_pushed_body_entered"]
 [connection signal="body_exited" from="ButtonPushed" to="." method="_on_button_pushed_body_exited"]
