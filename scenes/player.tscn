@@ -118,18 +118,18 @@ zoom = Vector2(6, 6)
 process_callback = 0
 position_smoothing_enabled = true
 
-[node name="PlayerHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -5.5)
-shape = SubResource("CapsuleShape2D_g2els")
-
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
 texture = ExtResource("1_3vyb7")
 hframes = 11
 
+[node name="PlayerHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -5.5)
+shape = SubResource("CapsuleShape2D_g2els")
+
 [node name="SizeChecker" type="RayCast2D" parent="."]
 position = Vector2(-0.5, -1)
-target_position = Vector2(0, -10)
+target_position = Vector2(0, -9)
 hit_from_inside = true
 
 [node name="Feet" type="AudioStreamPlayer2D" parent="."]
