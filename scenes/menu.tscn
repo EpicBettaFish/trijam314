@@ -118,6 +118,7 @@ grow_vertical = 2
 texture = SubResource("CanvasTexture_myx47")
 
 [node name="PausedMenu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -181,7 +182,7 @@ offset_right = 577.0
 offset_bottom = 309.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_hover_color = Color(1, 1, 0.5, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.69, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.913725, 0.929412, 0.94902, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 0.141176, 1)
@@ -277,7 +278,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 148.0
 offset_bottom = 76.0
-theme_override_colors/font_hover_color = Color(1, 1, 0.5, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.690196, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.913725, 0.929412, 0.94902, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 0.141176, 1)
