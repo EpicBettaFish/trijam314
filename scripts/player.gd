@@ -52,6 +52,7 @@ func _physics_process(delta: float) -> void:
 	
 	# jump
 	if Input.is_action_pressed("jump") and is_on_floor():
+		footstep_sound = true
 		$Feet.stream = foot_sounds[1]
 		$Feet.play()
 		velocity.y = jump
@@ -60,6 +61,10 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if direction:
 			player_animator.play("walk")
+			if !footstep_sound:
+				footstep_sound = true
+				$Feet.stream = foot_sounds[0]
+				$Feet.play()
 		else:
 			player_animator.play("idle")
 	else:
