@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bcff0f6mvl086"]
+[gd_scene load_steps=11 format=3 uid="uid://bcff0f6mvl086"]
 
 [ext_resource type="Texture2D" uid="uid://cohk53g0wdyr4" path="res://assets/sprites/player.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://q33nqwlfc327" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://fdkgk1qfkyig" path="res://scenes/dialogue.tscn" id="3_qhqgy"]
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 length = 0.001
@@ -133,5 +134,7 @@ hit_from_inside = true
 
 [node name="Feet" type="AudioStreamPlayer2D" parent="."]
 bus = &"SFX"
+
+[node name="Dialogue" parent="." instance=ExtResource("3_qhqgy")]
 
 [connection signal="finished" from="Feet" to="." method="_on_feet_finished"]

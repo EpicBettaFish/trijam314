@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dyr4gk2ymlpgv"]
+[gd_scene load_steps=30 format=4 uid="uid://dyr4gk2ymlpgv"]
 
 [ext_resource type="Texture2D" uid="uid://cldpsq0c3g8ph" path="res://assets/sprites/tile.png" id="1_gf1bn"]
 [ext_resource type="Texture2D" uid="uid://cjxtjyfuyma33" path="res://assets/sprites/tile_norm.png" id="2_ha2ph"]
@@ -10,6 +10,11 @@
 [ext_resource type="Shader" uid="uid://dsottqlsp70a0" path="res://scenes/sway.gdshader" id="8_vjnli"]
 [ext_resource type="Texture2D" uid="uid://dti42imxlwd5w" path="res://assets/sprites/doodads.png" id="9_oelfw"]
 [ext_resource type="AudioStream" uid="uid://cyi7op6vdiffm" path="res://assets/audio/ambient music.mp3" id="10_yfdfb"]
+[ext_resource type="PackedScene" uid="uid://ibgi54p8wpvf" path="res://scenes/dialogue_cutscene.tscn" id="11_70npj"]
+[ext_resource type="AudioStream" uid="uid://bbpbatdy8y14y" path="res://assets/audio/scott0-1.mp3" id="12_7hj75"]
+[ext_resource type="AudioStream" uid="uid://mucuxwcdr15n" path="res://assets/audio/jude0-1.mp3" id="13_de42d"]
+[ext_resource type="AudioStream" uid="uid://4o2a156ofr41" path="res://assets/audio/scott0-2.mp3" id="14_ehpj7"]
+[ext_resource type="AudioStream" uid="uid://bq0rd84rf36j8" path="res://assets/audio/jude0-2.mp3" id="15_tl6ws"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_bkknn"]
 diffuse_texture = ExtResource("1_gf1bn")
@@ -570,5 +575,10 @@ environment = SubResource("Environment_oelfw")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_yfdfb")
+volume_db = -6.559
 autoplay = true
 bus = &"MUSIC"
+
+[node name="DialogCutscene" parent="." instance=ExtResource("11_70npj")]
+position = Vector2(16, -12)
+streams = Array[AudioStream]([ExtResource("12_7hj75"), ExtResource("13_de42d"), ExtResource("14_ehpj7"), ExtResource("15_tl6ws")])

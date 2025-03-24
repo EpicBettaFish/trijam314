@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var player_animator: AnimationPlayer = $PlayerAnimator
 @onready var player_sprite: Sprite2D = $PlayerSprite
+@onready var dialogue = $Dialogue
 
 const SPEED = 50.0
 var jump = -125.0

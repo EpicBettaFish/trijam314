@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://fdkgk1qfkyig"]
+
+[ext_resource type="Script" uid="uid://dnk6fndhfspf5" path="res://scripts/dialogue.gd" id="1_jwyou"]
+
+[node name="Dialogue" type="AudioStreamPlayer"]
+volume_db = 2.0
+bus = &"SFX"
+script = ExtResource("1_jwyou")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
