@@ -5,4 +5,4 @@ func _ready() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	get_tree().sdmsdtm ##make go to end screen!!
+	get_tree().change_scene_to_file("res://scenes/EndScreen.tscn")

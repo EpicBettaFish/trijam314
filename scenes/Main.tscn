@@ -42,7 +42,7 @@
 [ext_resource type="AudioStream" uid="uid://38k16q1iix4x" path="res://assets/audio/scott10-1.mp3" id="38_8cp6k"]
 [ext_resource type="AudioStream" uid="uid://bydhjo6423c2k" path="res://assets/audio/jude10-1.mp3" id="39_8b871"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mryrf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8b871"]
 texture = ExtResource("3_jlsqs")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
@@ -150,9 +150,9 @@ tile_size = Vector2i(8, 8)
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/2 = SubResource("TileSetAtlasSource_mryrf")
+sources/2 = SubResource("TileSetAtlasSource_8b871")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5sna"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdwbg"]
 texture = ExtResource("4_q8u5g")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
@@ -293,13 +293,13 @@ tile_size = Vector2i(8, 8)
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/1 = SubResource("TileSetAtlasSource_e5sna")
+sources/1 = SubResource("TileSetAtlasSource_pdwbg")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_bkknn"]
 diffuse_texture = ExtResource("1_c01mt")
 normal_texture = ExtResource("2_nxtc6")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_osw8o"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5grtr"]
 texture = SubResource("CanvasTexture_bkknn")
 texture_region_size = Vector2i(8, 8)
 use_texture_padding = false
@@ -478,18 +478,18 @@ physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "wall"
 terrain_set_0/terrain_0/color = Color(0.332671, 0.338281, 0.669836, 1)
-sources/0 = SubResource("TileSetAtlasSource_osw8o")
+sources/0 = SubResource("TileSetAtlasSource_5grtr")
 
 [sub_resource type="Gradient" id="Gradient_pmxr0"]
 offsets = PackedFloat32Array(0, 0.526667, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.568627, 1, 1, 1, 0)
 
-[sub_resource type="Gradient" id="Gradient_lwk6r"]
+[sub_resource type="Gradient" id="Gradient_vua0o"]
 offsets = PackedFloat32Array(0, 0.038961, 0.11039)
 colors = PackedColorArray(1, 1, 1, 0.392157, 0.470588, 0.470588, 0.470588, 0.543714, 0, 0, 0, 0.678431)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ft6cd"]
-gradient = SubResource("Gradient_lwk6r")
+gradient = SubResource("Gradient_vua0o")
 width = 768
 height = 768
 fill = 1
@@ -517,7 +517,7 @@ shader_parameter/speed = 2.0
 shader_parameter/wave_frequency = 44.69
 shader_parameter/wave_length = 200.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxlcp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t70y2"]
 texture = ExtResource("19_1nqs0")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
@@ -530,7 +530,7 @@ texture_region_size = Vector2i(8, 8)
 
 [sub_resource type="TileSet" id="TileSet_ebg2g"]
 tile_size = Vector2i(8, 8)
-sources/0 = SubResource("TileSetAtlasSource_yxlcp")
+sources/0 = SubResource("TileSetAtlasSource_t70y2")
 
 [node name="BaseScene2" type="Node2D"]
 script = ExtResource("1_3p2gp")
@@ -644,7 +644,7 @@ tile_map_data = PackedByteArray("AAALAAcAAAACAAEAAAALAAYAAAACAAEAAAALAAUAAAACAAE
 tile_set = SubResource("TileSet_pmxr0")
 
 [node name="Player" parent="." instance=ExtResource("6_wp0k4")]
-position = Vector2(-93, 1)
+position = Vector2(-95, -124)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
 amount = 24
@@ -1068,7 +1068,7 @@ position = Vector2(510, 3)
 streams = Array[AudioStream]([ExtResource("31_8b871")])
 
 [node name="DialogCutscene5" parent="." instance=ExtResource("20_2ofn6")]
-position = Vector2(775, 34)
+position = Vector2(774, 45)
 streams = Array[AudioStream]([ExtResource("31_kxyth"), ExtResource("32_cobve")])
 
 [node name="DialogCutscene6" parent="." instance=ExtResource("20_2ofn6")]
