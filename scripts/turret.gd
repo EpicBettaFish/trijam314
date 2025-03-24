@@ -4,7 +4,6 @@ extends StaticBody2D
 @export var shootingInterval = 0.2
 var realShootingInterval
 
-@onready var fastCollider = $FastCollider
 
 var bulletScene = preload("res://scenes/bullet.tscn")
 
