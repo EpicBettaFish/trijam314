@@ -11,19 +11,22 @@ var push_force = 10.0
 
 func _physics_process(delta: float) -> void:
 	# settings jump height setter
-	if Singleton.jump_height == 0:
-		jump = -80
-	elif Singleton.jump_height == 1:
-		jump = -125.0
-	else:
-		jump = -200
-		
-	if Singleton.player_size == 0:
-		scale = Vector2(.5,.5)
-	elif Singleton.player_size == 1:
-		scale = Vector2(1,1)
-	else:
-		scale = Vector2(2,2)
+	match Singleton.jump_height:
+		0.0:
+			jump = -80.0
+		1.0:
+			jump = -125.0
+		2.0:
+			jump = -200.0
+			
+	match Singleton.player_size:
+		0.0:
+			scale = Vector2(.5,.5)
+		1.0:
+			scale = Vector2(1,1)
+		2.0:
+			scale = Vector2(2,2)
+			
 		
 	if size_checker.is_colliding():
 		# *****TEMPORARY***** should set to last checkpoint
