@@ -25,7 +25,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		scale = Vector2(2,2)
 		
-	print(size_checker.is_colliding())
+	if size_checker.is_colliding():
+		get_tree().quit
+
 	# player controls
 	var direction := Input.get_axis("left", "right")
 	if direction:

@@ -48,6 +48,8 @@ func _on_resume_pressed() -> void:
 	# resume
 	get_tree().paused = false
 	paused_menu.visible = false
+	settings_menu.visible = false
+	darken.visible = false
 
 
 func _on_quit_pressed() -> void:

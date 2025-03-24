@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cqqe16565b8em"]
+[gd_scene load_steps=22 format=4 uid="uid://b05u0p5i5xc2f"]
 
 [ext_resource type="Texture2D" uid="uid://cldpsq0c3g8ph" path="res://assets/sprites/tile.png" id="1_c01mt"]
 [ext_resource type="Texture2D" uid="uid://cjxtjyfuyma33" path="res://assets/sprites/tile_norm.png" id="2_nxtc6"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3yg5jhjt01ub" path="res://scenes/button.tscn" id="7_nxtc6"]
 [ext_resource type="PackedScene" uid="uid://d34xe0oeosk1b" path="res://scenes/door.tscn" id="8_q8u5g"]
 [ext_resource type="PackedScene" uid="uid://cp41fugu1ykmr" path="res://scenes/cube.tscn" id="9_lhr70"]
-[ext_resource type="PackedScene" uid="uid://3apyyh41b6fh" path="res://scenes/lever.tscn" id="10_lhr70"]
+[ext_resource type="PackedScene" path="res://scenes/lever.tscn" id="10_lhr70"]
 [ext_resource type="PackedScene" uid="uid://deq7l2538xmmt" path="res://scenes/menu.tscn" id="11_wp0k4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mryrf"]
