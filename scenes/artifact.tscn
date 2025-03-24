@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cs8raj2p0sn66"]
+[gd_scene load_steps=8 format=3 uid="uid://cs8raj2p0sn66"]
 
 [ext_resource type="Texture2D" uid="uid://dams5et3hk1io" path="res://assets/sprites/artifact.png" id="1_0lcuo"]
+[ext_resource type="Script" uid="uid://8sib2ytvvfby" path="res://scripts/artifact.gd" id="1_a37it"]
 [ext_resource type="Texture2D" uid="uid://dl24gcr0etx3h" path="res://assets/sprites/glow.png" id="2_7gita"]
 
 [sub_resource type="Gradient" id="Gradient_0lcuo"]
@@ -95,6 +96,7 @@ _data = {
 }
 
 [node name="Node" type="Node2D"]
+script = ExtResource("1_a37it")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_0lcuo")
