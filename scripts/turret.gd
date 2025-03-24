@@ -14,7 +14,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Singleton.machine_speed > 0:
 		if $BULLETDIR/DeathCast.is_colliding():
-			get_parent().get_parent().die()
+			if $BULLETDIR/DeathCast.get_collider().is_in_group("player"):
+				get_parent().get_parent().die()
 
 func timerLoop() -> void:
 	match Singleton.machine_speed:
