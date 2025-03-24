@@ -899,6 +899,7 @@ shape = SubResource("RectangleShape2D_cvmbd")
 environment = SubResource("Environment_cvmbd")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("17_ft6cd")
 volume_db = -6.559
 autoplay = true

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dnk6fndhfspf5" path="res://scripts/dialogue.gd" id="1_jwyou"]
 
 [node name="Dialogue" type="AudioStreamPlayer"]
+process_mode = 3
 volume_db = 2.0
 bus = &"SFX"
 script = ExtResource("1_jwyou")
