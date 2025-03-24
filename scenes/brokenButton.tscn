@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0fcdj6addc4j"]
+
+[ext_resource type="Script" uid="uid://8cnigygb4ja2" path="res://scripts/broken_button.gd" id="1_s0pyj"]
+[ext_resource type="Texture2D" uid="uid://bf7ie3wujf2oe" path="res://assets/sprites/button.png" id="2_yiure"]
+[ext_resource type="Texture2D" uid="uid://dv136lseppt5v" path="res://assets/sprites/button_norm.png" id="3_rpj1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi6dp"]
+size = Vector2(10, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3q610"]
+diffuse_texture = ExtResource("2_yiure")
+normal_texture = ExtResource("3_rpj1i")
+
+[node name="BrokenButton" type="StaticBody2D"]
+script = ExtResource("1_s0pyj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(5, -2, 7, 0, -7, 0, -5, -2)
+
+[node name="ButtonPushed" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonPushed"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_mi6dp")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = SubResource("CanvasTexture_3q610")
+hframes = 2
+
+[connection signal="body_entered" from="ButtonPushed" to="." method="_on_button_pushed_body_entered"]

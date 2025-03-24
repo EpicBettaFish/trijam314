@@ -28,7 +28,7 @@ func timerLoop() -> void:
 
 func shoot() -> void:
 	var newBullet = bulletScene.instantiate()
-	newBullet.rotation = bulletDir.rotation
+	newBullet.global_rotation = bulletDir.global_rotation
 	newBullet.myTurret = self
 	newBullet.global_position = $BULLETDIR.global_position
 	get_parent().add_child(newBullet)

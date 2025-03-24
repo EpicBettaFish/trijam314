@@ -13,7 +13,7 @@ diffuse_texture = ExtResource("2_rt7e1")
 normal_texture = ExtResource("3_rt7e1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3mc5"]
-size = Vector2(11, 8)
+size = Vector2(11, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_485p4"]
 size = Vector2(1, 4)
@@ -49,7 +49,7 @@ hframes = 2
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -4)
+position = Vector2(0.5, -3)
 shape = SubResource("RectangleShape2D_x3mc5")
 
 [node name="Raycast" type="RayCast2D" parent="."]
