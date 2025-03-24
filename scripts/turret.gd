@@ -2,16 +2,27 @@ extends StaticBody2D
 
 @onready var bulletDir = $BULLETDIR
 @export var shootingInterval = 0.2
+var realShootingInterval
+
 @onready var fastCollider = $FastCollider
 
 var bulletScene = preload("res://scenes/bullet.tscn")
 
 func _ready() -> void:
+	realShootingInterval = shootingInterval
 	timerLoop()
 
 
 func timerLoop() -> void:
-	await get_tree().create_timer(shootingInterval).timeout
+	match Singleton.machine_speed:
+		0.0:
+			realShootingInterval = shootingInterval * 30
+		1.0:
+			realShootingInterval = shootingInterval
+		2.0:
+			realShootingInterval = shootingInterval / 5
+	await get_tree().create_timer(realShootingInterval).timeout
+	
 	shoot()
 	timerLoop()
 
