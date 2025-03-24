@@ -4,7 +4,6 @@ var myTurret
 var SPEED = 5.0
 
 func _physics_process(delta: float) -> void:
-	print(Singleton.machine_speed)
 	match Singleton.machine_speed:
 		0.0:
 			SPEED = 0.25
