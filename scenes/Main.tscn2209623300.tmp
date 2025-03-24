@@ -543,7 +543,7 @@ connectedNode = NodePath("../Door")
 position = Vector2(88, -15)
 
 [node name="Cube" parent="Elements" instance=ExtResource("9_lhr70")]
-position = Vector2(25, 4)
+position = Vector2(26, -6)
 lock_rotation = false
 
 [node name="Lever" parent="Elements" node_paths=PackedStringArray("connectedNode") instance=ExtResource("10_lhr70")]
@@ -561,7 +561,7 @@ connectedNode = NodePath("../Door3")
 position = Vector2(362, -63)
 
 [node name="Cube2" parent="Elements" instance=ExtResource("9_lhr70")]
-position = Vector2(329, -36)
+position = Vector2(329, -38)
 
 [node name="Turret" parent="Elements" instance=ExtResource("11_bjd11")]
 position = Vector2(399, -71)
