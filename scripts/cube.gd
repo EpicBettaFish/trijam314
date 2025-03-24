@@ -20,3 +20,4 @@ func saveCheckpoint() -> void:
 func loadCheckpoint() -> void:
 	global_transform.origin = savedPos
 	linear_velocity = Vector2(0,0)
+	angular_velocity = 0
